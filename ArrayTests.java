@@ -7,12 +7,22 @@ public class ArrayTests {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
+
+    int[] input2 = {1,2,3};
+    int[] expected_output2 = {3,2,1};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(expected_output2, input2);
+
 	}
 
 
   @Test
   public void testReversed() {
-    int[] input1 = { };
-    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+    int[] input2 = {1,2,3};
+    int[] expected_output2 = {3,2,1};
+    int[] output = ArrayExamples.reversed(input2);
+    assertArrayEquals(expected_output2, output);
+
   }
+
 }
