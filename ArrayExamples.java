@@ -30,10 +30,20 @@ public class ArrayExamples {
     for(double num: arr) {
       if(num < lowest) { lowest = num; }
     }
+    double count = 0;
+    for(double num: arr){
+      if(num == lowest){
+        count += 1;
+      }
+    }
     double sum = 0;
+
     for(double num: arr) {
       if(num != lowest) { sum += num; }
     }
+    
+    sum = sum + (count-1)*lowest;
+
     return sum / (arr.length - 1);
   }
 

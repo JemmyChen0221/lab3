@@ -1,7 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 
-interface StringChecker { boolean checkString(String s); }
+interface StringChecker { 
+  boolean checkString(String s);
+}
+
+class ContainsA implements StringChecker{
+
+  @Override
+  public boolean checkString(String s) {
+    if(s.contains("a")){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  
+}
 
 class ListExamples {
 
@@ -12,7 +27,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(s);
       }
     }
     return result;

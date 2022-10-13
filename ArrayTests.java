@@ -25,4 +25,12 @@ public class ArrayTests {
 
   }
 
+  @Test
+  public void testAverageWithoutLowest(){
+    double[] input = {1,1,2,3,4};
+    double expected = (1+2+3+4)/4.0;
+    double output = ArrayExamples.averageWithoutLowest(input);
+    assertEquals(expected, output,0);
+  }
+
 }
